@@ -1,0 +1,251 @@
+:root{
+    --primary-color: #31c27c;
+}
+body {
+    margin: 0;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    min-width: 1000px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+header {
+    height: 90px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+.inner{
+    width: 1200px;
+    margin: auto;
+    cursor: pointer;
+}
+section{
+    background: url(./imgs/bg_detail.jpg) 50% 0 repeat-x;
+}
+.section-header{
+    position: relative;
+    padding-top: 4.16667%;
+    padding-bottom: 2%;
+}
+.header-title{
+    background-image: url(./imgs/section_header.png);
+    width: 196px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+/* gdtj */
+.gdtj .header-title{
+    background-position: 0 0;
+}
+.tag-list{
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.tag-item{
+    font-size: 15px;
+    margin: 0 24px;
+    line-height: 26px;
+    color: #000;
+    text-decoration: none;
+}
+.tag-active{
+    color: var(--primary-color);
+}
+.gdtj-playlist{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 45px;
+    overflow: hidden;
+}
+.album{
+    overflow: hidden;
+}
+.album-cover{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.cover-img{
+    width: 100%;
+    transition: all 0.75s;
+}
+.cover-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.cover-play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -35px;
+    margin-top: -35px;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.5s;
+}
+.album-cover:hover .cover-mask{
+    opacity: 0.2;
+}
+.album-cover:hover .cover-img{
+    transform: scale(1.07);
+}
+.album-cover:hover .cover-play{
+    opacity: 1;
+    transform: scale(1);
+}
+.nowrap{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.album-playcount{
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+}
+
+/* xgsf */
+.xgsf .header-title{
+    background-position: 0 -50px;
+}
+.xgsf .inner{
+    position: relative;
+}
+.xgsf-playall{
+    position: absolute;
+    left: 0;
+    top: 106px;
+    padding: 6px 22px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #c9c9c9;
+    color: #000;
+}
+.icon-playall{
+    margin: 5px 8px 0 0;
+}
+.xgsf-playall:hover{
+    background-color: #ededed;
+    color: #333;
+}
+.xgsf-songlist{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.xgsf-album{
+    display: flex;
+    position: relative;
+    height: 86px;
+    overflow: hidden;
+    border-top: 1px solid #f2f2f2;
+    margin: -1px 30px 13px 0;
+    padding-top: 12px;
+    font-size: 14px;
+}
+.xgsf-album .album-cover{
+    height: 86px;
+    width: 86px;
+    margin-right: 14px;
+}
+.xgsf-album .cover-play{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+.album-dsc{
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+.xgsf-album{
+    overflow: hidden;
+}
+.dsc-name{
+    flex: 1;
+}
+.xgsf-album .album-name{
+    padding: 21px 0 2px;
+    max-width: 182px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.xgsf-album .album-time{
+    display: flex;
+    align-items: center;
+}
+.xgsf-album .album-author{
+    max-width: 194px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.album-author a{
+    color: #999;
+}
+.xgsf-album .album-time{
+    color: #999;
+}
+
+/* MV */
+.mv .header-title{
+    background-position: 0 -250px;
+}
+.mv-mvlist{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 35px;
+    overflow: hidden;
+    gap: 25px 15px;
+}
+.mv-album{
+    overflow: hidden;
+}
+.mv-album .album-title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.mv-album .album-author{
+    margin-top: 4px;
+}
+.album-playcount{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+.icon-listen{
+    margin-right: 5px;
+}
+a:hover{
+    color: var(--primary-color);
+}
+
+footer{
+    background: #333;
+    height: 200px;
+}
